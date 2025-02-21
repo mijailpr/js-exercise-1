@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Memoria</title>
+    <meta name="description" content="Juego de memoria con múltiples niveles y temas visuales">
+    <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+    <div class="header" role="banner">
+        <div id="timerDisplay" aria-live="polite">00:00</div>
+        <div id="turnsDisplay" aria-live="polite">Turnos: 0</div>
+
+        <div class="controls">
+            <label for="theme">Tema:</label>
+            <select id="theme" aria-label="Seleccionar tema visual">
+                <option value="billar">Billar</option>
+                <option value="space">Espacio</option>
+                <option value="ocean">Océano</option>
+            </select>
+
+            <label for="level">Nivel:</label>
+            <select id="level" aria-label="Seleccionar nivel de dificultad">
+                <option value="2x2">2x2</option>
+                <option value="4x3">4x3</option>
+                <option value="4x4">4x4</option>
+                <option value="4x5">4x5</option>
+                <option value="4x6">4x6</option>
+            </select>
+        </div>
+    </div>
+
+    <main>
+        <div class="game-board" role="grid" aria-label="Tablero de memoria"></div>
+
+        <div class="message" role="dialog" aria-labelledby="gameOverTitle">
+            <h2 id="gameOverTitle">¡Felicidades! Has ganado</h2>
+            <button type="button">Reiniciar Juego</button>
+        </div>
+    </main>
+
+    <script type="module" src="src/main.js"></script>
+</body>
+
+</html>
